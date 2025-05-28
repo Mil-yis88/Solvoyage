@@ -1,0 +1,37 @@
+*{
+box-sizing: border-box ;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0,5rem;
+    background-color: #acdae1;
+    color: black;
+
+}
+
+header{
+    align-items: flex-end;
+    min-height: 300px;
+    background-image: url("/image/Tourism\ 4.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+    
+}
+footer {
+    padding: 1rem;
+    color:black;
+    background-color:#7dc3d5 ;
+    justify-content: space-between;
+   
+}
+
+footer div img{
+    width: 2rem;
+}
