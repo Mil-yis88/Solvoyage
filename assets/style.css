@@ -1,37 +1,233 @@
 *{
 box-sizing: border-box ;
+padding: 0;
+margin: 0;
 }
 body{
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
 }
 
 nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     padding: 0,5rem;
-    background-color: #acdae1;
+    background-color: #d9f6fce1;
     color: black;
 
+}
+.btn {
+    width: 10rem;
+}
+.bi{
+    display: flex;
 }
 
 header{
-    align-items: flex-end;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     min-height: 300px;
-    background-image: url("/image/Tourism\ 4.jpeg");
+    background-image: url("/image/header.jpeg");
     background-size: cover;
     background-position: center;
-    color: black;
-    
+    color: black;    
 }
+header h1{
+    display: flex;
+}
+.gallery-container{
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.gallery-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+}
+.slider-container{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.slider{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+}
+.slide{
+    width: 25%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.slide img{
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.slide-content{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent);
+    color: black;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+.slide:hover .slide-content{
+    transform: translateY(0);
+}
+.slide-content.hidden{
+    transform: translateY(100%);
+}
+.slide-title{
+    font-size: 1,5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.slide-description{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+.nav-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ACDAE1;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-button.prev{
+    left: 20px;
+}
+.nav-button.next{
+    right: 20px;
+}
+.nav-button::before{
+    transform: rotate(135deg);
+}
+.nav-button::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 2px solid #333;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.nav-button:hover{
+    background: #ACDAE1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) ;
+    transform: translateY(-50%) scale(1.1);
+}
+
 footer {
+    display: flex;
     padding: 1rem;
     color:black;
-    background-color:#7dc3d5 ;
-    justify-content: space-between;
+    background-color:#ACDAE1 ;
+    justify-content:space-between;
    
 }
 
 footer div img{
     width: 2rem;
+    
 }
+.nav-link {
+    display: inline-block;
+}
+.link {
+    margin-left: 5rem;
+}
+.destination {
+    margin-right: 8rem;
+}
+div.container{
+    border: 5px;
+}
+
+@media screen and  (max-width : 780px) {
+.bi-star group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div .container{
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+
+}
+div .container img{
+    
+    scroll-snap-align: center;
+    width: 100%;
+    max-width: none;
+    flex: 0 0 100%;
+  }
+
+.gallery-title{
+    font-size: 1.5rem;
+}
+.slide img{
+    height: 300px;
+}
+.nav-button{
+    width: 40px;
+    height: 40px;
+} 
+.nav-button.prev{
+    left: 10px;
+}
+.nav-button.next{
+    right: 10px;
+}
+}
+
+@media screen and (max-width: 480) {
+    .gallery-container{
+        padding: 10px;
+    } 
+
+    .gallery-title{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .slide img{
+        height: 250px;
+    }
+
+    .slide-content{
+        padding: 20px 15px 15px;
+    }
+
+    .slide-title{
+        font-size: 1.2rem;
+    }
+
+    .slide-description{
+        font-size: 0.8 rem;
+    }
+}
+
+    
