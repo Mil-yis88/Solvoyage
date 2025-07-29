@@ -37,25 +37,37 @@
           class="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <div class="navbar-nav me-5 mb-2 mb-lg-2">
-            <a
-              class="link nav-link active"
-              aria-current="page"
-              href="Accueil.html"
-              >Accueil</a
-            >
-            <a class="link nav-link destination" href="Destination.html"
-              >Destination</a
-            >
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search "
-                placeholder=""
-                aria-label="Search"
-              />
-            </form>
-          </div>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="accueil.html"
+                >Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="destination.html"
+                >Destination</a
+              >
+            </li>
+
+            
+            <button type="button" class="btn btn-light">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                ></path>
+              </svg>
+            </button>
+          </ul>
         </div>
       </div>
     </nav>
@@ -63,13 +75,13 @@
     <main>
       <div class="gallery-container">
         <h4 class="gallery-title">Differentes destinations</h4>
-        <div class="slider-container">
+         <div class="slider-container">
           <div class="slider">
             <div class="slide" id="slide">
               <img src="image/Malte.jpg" alt="ville" />
               <div class="slide-content hidden">
                 <div class="slide-title">Maldives</div>
-                <div class="slide-description">
+                <div class="slide-description" bg>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
                   voluptatibus reiciendis quos officiis excepturi. Est excepturi
                   accusamus facere officiis. Iusto pariatur esse voluptatem,
@@ -77,7 +89,7 @@
                 </div>
               </div>
             </div>
-             <div class="slide" id="slide">
+            <div class="slide" id="slide">
               <img src="image/Marbella.jpeg" alt="Ville" />
               <div class="slide-content hidden">
                 <div class="slide-title">Paysage</div>
@@ -89,7 +101,7 @@
                 </div>
               </div>
             </div>
-             <div class="slide" id="slide">
+            <div class="slide" id="slide">
               <img src="" alt="" />
               <div class="slide-content hidden">
                 <div class="slide-title">Paysage</div>
@@ -101,7 +113,7 @@
                 </div>
               </div>
             </div>
-             <div class="slide" id="slide">
+            <div class="slide" id="slide">
               <img src="" alt="" />
               <div class="slide-content hidden">
                 <div class="slide-title">Paysage</div>
@@ -113,11 +125,20 @@
                 </div>
               </div>
             </div>
-            <button class="nav-button prev" onclick="changerSlide(-1)"></button>
-            <button class="nav-button next" onclick="changerSlide(1)"></button>
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselDarkVariant" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-mdb-target="#carouselDarkVariant" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+            <!--<button class="nav-button prev" onclick="changerSlide(-1)">
+              -
+            </button>
+            <button class="nav-button next" onclick="changerSlide(1)">+</button>-->
           </div>
-        </div>
-      </div>
+        </div> 
       <div class="container">
         <div class="row justify-content-center my-4">
           <div class="col-md-6">

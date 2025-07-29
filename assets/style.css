@@ -6,12 +6,12 @@ margin: 0;
 body{
     min-height: 100vh;
 }
-
+ 
 nav{
     display: flex;
     justify-content:space-evenly;
     padding: 0,5rem;
-    background-color: #d9f6fce1;
+    background-color: #d6f5ffe1;
     color: black;
 
 }
@@ -20,6 +20,7 @@ nav{
 }
 .bi{
     display: flex;
+    justify-content: left;
 }
 
 header{
@@ -36,10 +37,9 @@ header h1{
     display: flex;
 }
 .gallery-container{
-    width: 100%; 
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 .gallery-title{
     text-align: center;
@@ -85,6 +85,8 @@ header h1{
 }
 .slide-content.hidden{
     transform: translateY(100%);
+    background-color: #93d9ff;
+
 }
 .slide-title{
     font-size: 1,5rem;
@@ -95,6 +97,7 @@ header h1{
     font-size: 0.9rem;
     line-height: 1.4;
     opacity: 0.9;
+    
 }
 .nav-button{
     display: flex;
